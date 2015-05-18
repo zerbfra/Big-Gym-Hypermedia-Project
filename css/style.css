@@ -1251,34 +1251,12 @@ span.week{
 	color:#fff;
 }
 /*--footer-top--*/
-.footer-top{
+.footer-spacer{
 	width:60%;
 	margin:0 auto;
 	padding:7% 0;
 }
-i.twt_icon{
-	background: url(../images/img-sprite.png)no-repeat -335px -119px;
-	width: 80px;
-	height: 70px;
-	float: left;
-	margin-right: 5%;
-}
-ul.twitter_footer li p{
-	color: #00BFF0;
-	font-size: 0.85em;
-	line-height: 1.5em;
-	margin:10px 0 0;
-	width: 86.5%;
-	float: left;
-}
-span.m_6{
-	color:#044C8F;
-}
-ul.twitter_footer{
-	list-style:none;
-	padding:0;
-	margin: 0;
-}
+
 /*--fooer-bottom--*/
 .footer-bottom{
 	background:#72d0f4;
