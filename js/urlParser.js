@@ -1,4 +1,4 @@
-var viewPage = getUrlParameter('p');
+var page = getUrlParameter('p');
 
 function getUrlParameter(sParam)
 {

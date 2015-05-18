@@ -15,16 +15,8 @@ body a{
 	height: 100%;
 	top: 0px;
 	left: 0px;
-	background: url(../images/banner11.jpg)no-repeat center top;
-	background-size: 100% 100%;
-	padding:16% 0 0 0;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-position: center;
-    	background: #00BFF0;
-	padding:10px 0 5px 0;
+    background: #00BFF0;
+	padding:10px 0 0px 0;
 }
 .header-text{
 	background:rgba(33, 191, 252, 0.35);
@@ -210,8 +202,12 @@ li.rss a span:hover{
 .toggleMenu {
     display:  none;
     background:#00BFF0;
-    padding: 10px 15px;
+    padding: 10px 5px;
+
     width: 100%;
+    margin-top:10px;
+    margin-bottom: 0px;
+
     color: #fff;
 }
 .nav {
@@ -228,7 +224,7 @@ li.rss a span:hover{
 }
 .nav ul {
     list-style: none;
-    width:12em;
+
 }
 .nav li a {
 	display: block;
@@ -238,10 +234,12 @@ li.rss a span:hover{
 	text-transform:uppercase;
 	font-weight:400;
 	margin-right: 10px;
+    margin-top:10px;
 	border:1px solid #72D0F4;
 }
 .nav li {
     position: relative;
+
 }
 .nav li.active a, .nav li a:hover {
 	border:1px solid #fff;
