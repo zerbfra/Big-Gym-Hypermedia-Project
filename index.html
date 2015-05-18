@@ -13,6 +13,9 @@
 
         <script src="js/jquery.min.js"></script>
 
+
+        <script src="js/urlParser.js"></script>
+
         <!-- grid-slider -->
         <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
         <script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
@@ -26,10 +29,20 @@
         <script>
             $(function(){
                 $(".header").load("header.html");
-                $(".main").load("home.html");
+
+                switch (viewPage) {
+                    case 'about':
+                        $(".main").load("about.html");
+                        break;
+                    default:
+                        $(".main").load("home.html");
+                }
+
                 $(".footer").load("footer.html");
             });
         </script>
+
+
 
 
     </head>
