@@ -1,2 +1,3 @@
-# big_gym
-Hypermedia Project 2014/15 
+# Hypermedia Applications - Technology Project Delivery
+
+This is the repository for my project of the Hypermedia Applications (web and multimedia) course, academic year 2014/15
