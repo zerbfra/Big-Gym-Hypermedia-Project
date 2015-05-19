@@ -871,6 +871,14 @@ i.like1{
 	background:#a5e5fe;
 	padding:5%;
 }
+
+.partners{
+	background:#a5e5fe;
+	padding:5%;
+    color: white;
+    text-align: center;
+}
+
 ul.event1{
 	width: 34%;
 	float: left;
