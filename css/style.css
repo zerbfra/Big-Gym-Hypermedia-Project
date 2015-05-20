@@ -234,7 +234,7 @@ li.rss a span:hover{
 	text-transform:uppercase;
 	font-weight:400;
 	margin-right: 10px;
-    margin-top:10px;
+    margin-top:2px;
 	border:1px solid #72D0F4;
 }
 .nav li {
@@ -242,7 +242,7 @@ li.rss a span:hover{
 
 }
 .nav li.active a, .nav li a:hover {
-	border:1px solid #fff;
+
 	border-radius:3px;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
@@ -271,7 +271,7 @@ li.rss a span:hover{
 .nav li  ul {
     position: absolute;
     left:-9999px;
-   	padding:27px 13px;
+   	padding:0px 10px;
     z-index:9999;
 }
 .nav > li.hover > ul {
@@ -1258,15 +1258,15 @@ span.week{
 }
 /*--footer-top--*/
 .footer-spacer{
-	width:60%;
+	width:100%;
 	margin:0 auto;
-	padding:7% 0;
+	padding:1% 0;
 }
 
 /*--fooer-bottom--*/
 .footer-bottom{
 	background:#72d0f4;
-	padding:3% 0;
+	padding:1% 0;
 }
 h4.m_7 {
 	color:#fff;
@@ -1355,7 +1355,7 @@ i.but_arrow{
 }
 .f-logo{
 	text-align: center;
-	margin-top: -10px;
+	margin-top: 10px;
 	padding-bottom: 2%;
 }
 p.m_9{
@@ -1368,6 +1368,8 @@ p.address{
 	color:#fff;
 	font-size:0.8125em;
 	line-height:1.5em;
+    /*padding-left:10px;*/
+    text-align: center;
 }
 span.m_10{
 	font-style:italic;
@@ -3055,7 +3057,7 @@ li.question_right{
 /*--contact--*/
 .contact{
 	background:#00bff0;
-	padding:5% 0;
+	padding:2% 0 30px 5%;
 }
 p.contact_msg{
 	color:#fff;
@@ -3093,7 +3095,7 @@ p.contact_msg{
 }
 .form-submit1{
 	float:left;
-	margin: 10px 0px 0 6px;
+	margin: 10px 0px 0 0px;
 }
 .form-submit1 input[type="submit"] {
 	color: #FFF;
@@ -4199,4 +4201,10 @@ span.m_26 {
 	.course_demo {
 		padding: 0 5%;
 	}
+}
+
+#map-canvas {
+    height: 400px;
+    margin: 0px;
+    padding: 0px
 }

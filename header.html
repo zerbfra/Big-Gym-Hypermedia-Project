@@ -2,7 +2,7 @@
 <div class="header-bottom">
     <div class="container">
         <div class="header-bottom_left">
-            <i class="phone"> </i><span>(+39) 02 123456</span>
+            <span><i class="fa fa-phone"></i>&nbsp;&nbsp;(+39) 02 12345678</span>
         </div>
         <div class="social">
             <ul>
@@ -27,17 +27,25 @@
             <a class="toggleMenu" href="#">Menu</a>
         </div>
         <div class="h_menu4"><!-- start h_menu4 -->
-            <ul class="nav">
+            <ul class="nav" id="menu_nav">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#" view_page="about" class="walkpage">La palestra</a></li>
-                <li><a href="trainers.html">Corsi</a></li>
+                <li><a href="#">La palestra</a></li>
+                <li><a href="#">Corsi disponibili</a>
+
+                <ul>
+					<li><a href="single_class.html">Per categoria</a></li>
+					<li><a href="single_class.html">Ordine alfabetico</a></li>
+					<li><a href="single_class.html">Per livello</a></li>
+				 </ul>
+
+                </li>
                 <li><a href="classes.html">Iscrizioni</a></li>
                 <li><a href="blog.html">Sale</a></li>
                 <li><a href="pricing.html">Orari</a></li>
-                <li><a href="contact.html">Istruttori</a></li>
-                <li><a href="contact.html">Contatti</a></li>
+                <li><a href="#trainers">Istruttori</a></li>
+                <li><a href="#contact">Contatti</a></li>
             </ul>
-           <script type="text/javascript" src="js/nav.js"></script>
+            <script type="text/javascript" src="js/nav.js"></script>
         </div><!-- end h_menu4 -->
         <div class="clear"></div>
     </div>
