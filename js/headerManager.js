@@ -12,7 +12,7 @@
         // load the page dinamycally inside the template
         $( ".main" ).load(page+'.html', function() {
             // specific js load for pages
-            //for istance, if(page == 'contact')
+            if(page== 'home')  $('#ca-container').contentcarousel();
         });
 
     });
