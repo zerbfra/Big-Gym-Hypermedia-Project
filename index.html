@@ -40,7 +40,10 @@
 
                 // default behaviour: load homepage
                 $(".main").load( "home.html", function() {
+                    // carousel only for home page
                     $('#ca-container').contentcarousel();
+                    // after loading the page we should load the page manager for links
+                    $.getScript('js/pageManager.js');
                 });
 
                 $(".footer").load("footer.html");

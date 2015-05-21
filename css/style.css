@@ -2198,11 +2198,12 @@ span.class_1{
 	margin-bottom: 0;
 }
 li.grid1{
-	width: 24.5%;
+	width: 46%;
 	float: left;
-	text-align: center;
+	text-align: left;
 	margin-right: 4%;
 	padding-right: 3%;
+
 	border-right: 1px solid #B9DEEC;
 }
 li.grid1 img{
@@ -2228,11 +2229,13 @@ li.grid1 p {
 	line-height: 1.3em;
 }
 li.grid2{
-	width: 33.5%;
-	float: left;
+	width: 46%;
+	float: right;
+    text-align: left;
 	margin-right: 4%;
 	padding-right: 3%;
-	border-right: 1px solid #B9DEEC;
+    padding-bottom: 0%;
+	/*border-right: 1px solid #B9DEEC;*/
 }
 li.grid3{
 	width:33.5%;
@@ -2305,6 +2308,7 @@ span.week_class {
 }
 ul.list1_class, ul.list2_class{
 	padding:0;
+    margin-left: 15px;
 }
 /*--blog--*/
 .blog_grid h3{
@@ -4207,4 +4211,9 @@ span.m_26 {
     height: 400px;
     margin: 0px;
     padding: 0px
+}
+
+.img-center {
+    margin-left: auto;
+    margin-right: auto;
 }

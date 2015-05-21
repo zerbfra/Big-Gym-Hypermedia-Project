@@ -11,8 +11,13 @@
 
         // load the page dinamycally inside the template
         $( ".main" ).load(page+'.html', function() {
-            // specific js load for pages
+            // carousel only for home page
             if(page== 'home')  $('#ca-container').contentcarousel();
+
+            // after loading the page we should load the page manager for links
+            $.getScript('js/pageManager.js');
         });
 
     });
+
+
