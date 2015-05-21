@@ -30,16 +30,19 @@ function responsiveMenu () {
         } else {
             $(".nav").show();
         }
+
         $(".nav li").unbind('mouseenter mouseleave');
         $(".nav li a.parent").unbind('click').bind('click', function(e) {
             // must be attached to anchor element to prevent bubbling
             e.preventDefault();
             $(this).parent("li").toggleClass("hover");
         });
+
     }
     else if (ww >= 768) {
         $(".toggleMenu").css("display", "none");
         $(".nav").show();
+
         $(".nav li").removeClass("hover");
         $(".nav li a").unbind('click');
         $(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
