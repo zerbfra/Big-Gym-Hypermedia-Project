@@ -18,7 +18,9 @@ $(".toggleMenu").click(function(e) {
 responsiveMenu();
 
 function slideMenu() {
-    $(".nav").slideToggle();
+    if (ww < 768) {
+        $(".nav").slideToggle();
+    }
 }
 
 function responsiveMenu () {
