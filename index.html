@@ -38,14 +38,14 @@
 
                 // load the header manager after loading the header
                 $(".header").load( "header.html", function() {
-                    $.getScript('js/headerManager.js');
+                    //$.getScript('js/headerManager.js');
                 });
 
                 // default behaviour: load homepage
                 $(".main").load( "home.html", function() {
                     // carousel only for home page
                     $('#ca-container').contentcarousel();
-                    // after loading the page we should load the page manager for links
+                    // after loading the page we should load the page manager for links (header + main div)
                     $.getScript('js/pageManager.js');
                 });
 

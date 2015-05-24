@@ -975,8 +975,9 @@ span.tab1-img img{
 	float: left;
 	width:70.5%;
 }
-.tab-text1 p a{
+.tab-text1 p {
 	color: #fff;
+    margin-bottom: 10px;
 	font-size: 0.8125em;
 	line-height: 1.5em;
 	-webkit-transition: all 0.3s ease-out;
@@ -985,13 +986,8 @@ span.tab1-img img{
 	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 }
-.tab-text1 p a:hover{
-	color: #00BFF0;
-	text-decoration: none;
-}
-.tab-text1 p {
-	margin-bottom: 10px;
-}
+
+
 span.m_date{
 	color:#555;
 	font-size:0.85em;
