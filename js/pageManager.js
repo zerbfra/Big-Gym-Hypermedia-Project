@@ -32,7 +32,7 @@ function manager(href) {
 
     // get the actual page name
     var params = href.substr(1);
-    var parts = params.split('+');
+    var parts = params.split('&');
     var page = parts[0];
     // special is an additional parameter to render the same page in different ways
     // for istance, single_class.html can contains different informations based on
@@ -54,6 +54,8 @@ function manager(href) {
         if(page== 'categories') getCategorie(function () { clickPageLinks(); });
         // COURSES, ALPH. ORDER
         if(page == 'classes_al') getCorsi(function () { clickPageLinks(); });
+        // SINGLE COURSE
+        if(page == 'single_class') getCorso(special,function () { clickPageLinks(); });
         //************** END SPECIFIC PAGE FUNCTIONS ***********//
 
 

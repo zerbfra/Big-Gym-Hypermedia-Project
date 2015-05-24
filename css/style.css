@@ -681,6 +681,10 @@ ul.tooltip{
 	border-bottom: 1px solid #B9DEEC;
 	padding:10px 0;
 }
+
+.cardio_sublist_last{
+	padding:10px 0;
+}
 .members{
 	background:#00bff0;
 	padding:10.3% 0%;
@@ -2273,12 +2277,19 @@ ul.list2_class li a:hover {
 	color:#00BFF0;
 	vertical-align: top;
 }
-ul.list1_class li a{
+ul.list1_class li {
 	color:#888;
 	font-size:0.85em;
 	vertical-align: top;
 	text-decoration: none;
 }
+
+ul.list1_class li a {
+
+	vertical-align: top;
+
+}
+
 ul.list1_class li a:hover{
 	color:#00BFF0;
 }
