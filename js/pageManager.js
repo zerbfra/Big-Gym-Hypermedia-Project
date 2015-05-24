@@ -31,7 +31,13 @@ function clickPageLinks() {
 function manager(href) {
 
     // get the actual page name
-    var page = href.substr(1);
+    var params = href.substr(1);
+    var parts = params.split('+');
+    var page = parts[0];
+    // special is an additional parameter to render the same page in different ways
+    // for istance, single_class.html can contains different informations based on
+    // different values of special
+    var special = parts[1];
 
     // enable script for calls to external php
     $.getScript('js/ajaxCalls.js');
@@ -39,14 +45,18 @@ function manager(href) {
     // load the page dinamycally inside the template
     $( ".main" ).load(page+'.html', function() {
 
-        // after loading the page we should load the page manager for links inside the main div
-        clickPageLinks();
-
         //************** SPECIFIC PAGE FUNCTIONS ****************//
+        // after loading the whole page we should load the page manager for links inside the main div, this is because
+        // the callback function
         // HOME PAGE
         if(page== 'home')  $('#ca-container').contentcarousel(); // carousel
         // COURSE CATEGORIES
-        if(page== 'categories') getCategorie(); // load categorie
+        if(page== 'categories') getCategorie(function () { clickPageLinks(); });
+        // COURSES, ALPH. ORDER
+        if(page == 'classes_al') getCorsi(function () { clickPageLinks(); });
+        //************** END SPECIFIC PAGE FUNCTIONS ***********//
+
+
 
     });
 }

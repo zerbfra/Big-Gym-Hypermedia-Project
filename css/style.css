@@ -671,16 +671,12 @@ ul.tooltip{
 	float:right;
 }
 .cardio_list{
-	width: 46.5%;
+	width: 100%;
 	float: left;
-	border-right: 1px solid #B9DEEC;
-	padding: 0 3% 0 0;
+	padding: 0 0 0 0;
 	margin-right: 3%;
 }
-.cardio_list1{
-	width: 46.5%;
-	float: left;
-}
+
 .cardio_sublist{
 	border-bottom: 1px solid #B9DEEC;
 	padding:10px 0;

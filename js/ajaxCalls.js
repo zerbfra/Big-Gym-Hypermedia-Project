@@ -1,4 +1,4 @@
-function getCategorie(){
+function getCategorie(callback){
     console.log("I'm ready!");
     var id=1;
 
@@ -32,6 +32,45 @@ function getCategorie(){
             }
 
             $(".classes_wrapper").html(el);
+            callback();
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}
+
+
+function getCorsi(callback){
+    console.log("I'm ready!");
+    var id=1;
+
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://zerbinatifrancesco.it/big_gym/getCorsi.php", //Relative or absolute path to file.php file
+        data: {course:id},
+        success: function(response) {
+
+            var corsi=JSON.parse(response);
+
+            var el='<div class="cardio_list">';
+            for(var i=0;i<corsi.length;i++){
+
+                el+='<div class="cardio_sublist"><ul class="cardio"><li><i class="clock"> </i><span>'+corsi[i].nome+'</span></li></ul>';
+                el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class+'+corsi[i].id+'"> </a></span></li></ul>';
+
+                el+='</div><div class="clear"></div></div>';
+
+            }
+
+            el+='</div><div class="clear"></div>';
+
+            $(".classes").html(el);
+            callback();
         },
         error: function(request,error)
         {

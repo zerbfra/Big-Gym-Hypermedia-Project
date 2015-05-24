@@ -45,7 +45,7 @@
                 $(".main").load( "home.html", function() {
                     // carousel only for home page
                     $('#ca-container').contentcarousel();
-                    // after loading the page we should load the page manager for links (header + main div)
+                    // after loading the page we should load the page manager for links (header + main div, footer doesn't contain links)
                     $.getScript('js/pageManager.js');
                 });
 
