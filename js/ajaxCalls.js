@@ -6,7 +6,7 @@ function getCategorie(callback){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://zerbinatifrancesco.it/big_gym/getCategorie.php", //Relative or absolute path to file.php file
+        url: "http://zerbinatifrancesco.it/hypermedia/php/getCategorie.php", //Relative or absolute path to file.php file
         data: {course:id},
         success: function(response) {
 
@@ -50,7 +50,7 @@ function getCorsi(callback){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://zerbinatifrancesco.it/big_gym/getCorsi.php", //Relative or absolute path to file.php file
+        url: "http://zerbinatifrancesco.it/hypermedia/php/getCorsi.php", //Relative or absolute path to file.php file
         success: function(response) {
 
             var corsi=JSON.parse(response);
@@ -92,7 +92,7 @@ function getCorso(id,callback){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://zerbinatifrancesco.it/big_gym/getCorso.php", //Relative or absolute path to file.php file
+        url: "http://zerbinatifrancesco.it/hypermedia/php/getCorso.php", //Relative or absolute path to file.php file
         data: {id:id},
         success: function(response) {
 
