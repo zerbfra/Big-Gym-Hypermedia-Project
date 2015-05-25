@@ -56,7 +56,13 @@ function manager(href) {
                 getCategorie(function () { clickPageLinks(); });
                 break;
             case 'classes_al':
-                getCorsi(function () { clickPageLinks(); });
+                getCorsi(special,function () { clickPageLinks(); });
+                break;
+            case 'classes_lvl':
+                getCorsiPerLivello(function () { clickPageLinks(); });
+                break;
+            case 'classes_cat':
+                getCorsiCat(special,function () { clickPageLinks(); });
                 break;
             case 'single_class':
                 getCorso(special,function () { clickPageLinks(); });
