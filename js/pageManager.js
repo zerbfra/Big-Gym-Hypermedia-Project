@@ -48,17 +48,26 @@ function manager(href) {
         //************** SPECIFIC PAGE FUNCTIONS ****************//
         // after loading the whole page we should load the page manager for links inside the main div, this is because
         // the callback function
-        // HOME PAGE
-        if(page== 'home')  $('#ca-container').contentcarousel(); // carousel
-        // COURSE CATEGORIES
-        if(page== 'categories') getCategorie(function () { clickPageLinks(); });
-        // COURSES, ALPH. ORDER
-        if(page == 'classes_al') getCorsi(function () { clickPageLinks(); });
-        // SINGLE COURSE
-        if(page == 'single_class') getCorso(special,function () { clickPageLinks(); });
+        switch (page) {
+            case 'home':
+                $('#ca-container').contentcarousel(); // carousel
+                break;
+            case 'categories':
+                getCategorie(function () { clickPageLinks(); });
+                break;
+            case 'classes_al':
+                getCorsi(function () { clickPageLinks(); });
+                break;
+            case 'single_class':
+                getCorso(special,function () { clickPageLinks(); });
+                break;
+            default:
+                clickPageLinks();
+        }
         //************** END SPECIFIC PAGE FUNCTIONS ***********//
 
 
 
-    });
-}
+
+        });
+        }

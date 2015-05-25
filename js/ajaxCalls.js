@@ -96,14 +96,39 @@ function getCorso(id,callback){
         data: {id:id},
         success: function(response) {
 
-            var corso=JSON.parse(response);
+
+            var json=JSON.parse(response);
+            var corso = json.info;
+            var orari = json.times;
+            var speciali = json.specials;
+
+
             nome = corso[0].nome;
             desc = corso[0].descrizione;
-            orari = corso[0].orari_html;
+            istruttore = corso[0].istruttore;
+            sala = corso[0].sala;
+
+            var more  = '<h3 class="m_13">Istruttore e sala</h3><img src="images/s2.jpg" class="img-responsive" alt=""/><h4>'+istruttore+'<br><span class="m_text">Sala '+sala+'</span></h4>';
 
             $("#name").html(nome);
             $("#description").html(desc);
-            $("#times").html(orari);
+            $("#more").html(more);
+
+            var el='';
+            for(var i=0;i<orari.length;i++){
+                el+='<li><i class="calender"></i><span class="week_class">'+orari[i].giorno+'</span><div class="hours_class">'+orari[i].orario+'</div><div class="clear"></div></li>';
+            }
+
+            $("#times").html(el);
+
+
+            var el='';
+            for(var i=0;i<speciali.length;i++){
+                el+='<li>'+speciali[i].testo+'</li>';
+            }
+
+            $("#specials").html(el);
+
             callback();
         },
         error: function(request,error)
