@@ -74,6 +74,7 @@ function getCorsiCat(category,callback) {
 
             el+='</div><div class="clear"></div>';
 
+
             $(".classes").html(el);
             callback();
         },
