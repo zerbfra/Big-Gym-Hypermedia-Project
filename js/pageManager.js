@@ -61,6 +61,9 @@ function manager(href) {
             case 'single_class':
                 getCorso(special,function () { clickPageLinks(); });
                 break;
+            case 'trainers':
+                getIstruttori(function () { clickPageLinks(); });
+                break;
             default:
                 clickPageLinks();
         }

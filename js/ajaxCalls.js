@@ -138,3 +138,39 @@ function getCorso(id,callback){
     });
 
 }
+
+
+function getIstruttori(callback){
+    console.log("I'm ready!");
+
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://zerbinatifrancesco.it/hypermedia/php/getIstruttori.php", //Relative or absolute path to file.php file
+        success: function(response) {
+
+            var istruttori=JSON.parse(response);
+            console.log(istruttori);
+            var el='';
+            for(var i=0;i<istruttori.length;i++){
+
+                    el+='<div class="col-md-4"><div class="box2"><div class="box1_left">';
+                    el+='<a href="#single_trainer&'+istruttori[i].id+'" class="interactive_link"><img src="images/'+istruttori[i].img_small+'" class="img-responsive img-center" alt=""/></a>';
+                    el+='<div class="desc2"><h3>'+istruttori[i].nome+'<br><span class="m_text">'+istruttori[i].specialita+'</span></h3>';
+                    el+='<div class="clear"></div></div></div>';
+                    el+='<div class="box1_right">'+istruttori[i].intro+'</div><div class="clear"></div></div></div>';
+            }
+            el+='<div class="clear"></div>';
+
+            $("#trainers_wrapper").html(el);
+            callback();
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}
+

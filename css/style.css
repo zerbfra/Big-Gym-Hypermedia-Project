@@ -1529,13 +1529,13 @@ i.a_heart:hover, i.a_fb:hover, i.a_twt:hover, i.like1:hover, i.heart1:hover, i.l
 	opacity:0.5;
 }
 .box1_right h4{
-	color: #FFF;
+	color: #00BFF0;
 	font-size:0.9em;
 	text-transform: uppercase;
 	margin-bottom: 5px;
 }
 .box1_right p{
-	color:#fff;
+	color: #00BFF0;
 	font-size:0.79em;
 	line-height:1.5em;
 	margin-bottom:20px;
