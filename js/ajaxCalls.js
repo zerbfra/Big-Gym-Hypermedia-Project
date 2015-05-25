@@ -102,13 +102,13 @@ function getCorso(id,callback){
             var orari = json.times;
             var speciali = json.specials;
 
+            var istruttore = json.trainer;
 
             nome = corso[0].nome;
             desc = corso[0].descrizione;
-            istruttore = corso[0].istruttore;
             sala = corso[0].sala;
 
-            var more  = '<h3 class="m_13">Istruttore e sala</h3><img src="images/s2.jpg" class="img-responsive" alt=""/><h4>'+istruttore+'<br><span class="m_text">Sala '+sala+'</span></h4>';
+            var more  = '<h3 class="m_13">Istruttore e sala</h3><a href="#single_trainer&'+istruttore[0].id+'" class="interactive_link"><img src="images/'+istruttore[0].img_small+'" class="img-responsive" alt=""/><h4>'+istruttore[0].nome+'</a><br><span class="m_text">Sala '+sala+'</span></h4>';
 
             $("#name").html(nome);
             $("#description").html(desc);
@@ -197,6 +197,7 @@ function getIstruttore(id,callback){
             awards = istruttore[0].awards_html;
             qualifiche = istruttore[0].qualifiche_html;
 
+            var top ='<h1 class="m_11">ISTRUTTORI<span class="class_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '+nome+'</span></h1>';
             var info = '<h4>'+nome+'<br><span class="m_text">'+specialita+'</span></h4><p>'+desc+'</p>';
 
             var el='<ul class="blog-list"><h4>Corsi</h4>';
@@ -206,7 +207,7 @@ function getIstruttore(id,callback){
             el+='</ul>';
 
 
-
+            $('.about_banner_wrap').html(top);
             $('#info').html(info);
             $("#awards").html(awards);
             $("#qual").html(qualifiche);

@@ -62,7 +62,22 @@ else {
 
     }
 
-    echo json_encode(array('info'=>$info, 'times'=>$times, 'specials'=>$specials));
+
+    $query = "SELECT nome,id,img_small FROM istruttori WHERE id=(SELECT istruttore FROM corsi WHERE id=".$id.")";
+    //query execution
+    $result = $mysqli->query($query);
+    //if there are data available
+    if($result->num_rows >0)
+    {
+        $trainer = array();
+        while($row = $result->fetch_array(MYSQL_ASSOC)) {
+            array_push($trainer,array_map('utf8_encode', $row));
+
+        }
+
+    }
+
+    echo json_encode(array('info'=>$info, 'times'=>$times, 'specials'=>$specials,'trainer'=>$trainer));
 
     //free result
     $result->close();
