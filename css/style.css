@@ -2520,6 +2520,9 @@ ul.recent-list li {
 	margin: 0 30px 10px;
 	border-bottom: 1px solid #B9DEEC;
 	padding-bottom: 10px;
+    color: #fff;
+    font-size: 0.8em;
+	vertical-align: top;
 }
 ul.recent-list li a {
 	color: #fff;
