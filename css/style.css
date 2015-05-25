@@ -2266,6 +2266,9 @@ p.price{
 ul.list2_class li {
 	list-style-image: url(../images/a4.png);
 	margin: 0 15px 10px;
+    color: #888;
+	font-size: 0.85em;
+	vertical-align: top;
 }
 ul.list2_class li a {
 	color: #888;

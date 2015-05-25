@@ -174,3 +174,41 @@ function getIstruttori(callback){
 
 }
 
+
+function getIstruttore(id,callback){
+    console.log("I'm ready!");
+
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://zerbinatifrancesco.it/hypermedia/php/getIstruttore.php", //Relative or absolute path to file.php file
+        data: {id:id},
+        success: function(response) {
+
+
+            var json=JSON.parse(response);
+            var istruttore = json; // per ora
+
+            nome = istruttore[0].nome;
+            specialita = istruttore[0].specialita;
+            desc = istruttore[0].descrizione;
+            awards = istruttore[0].awards_html;
+            qualifiche = istruttore[0].qualifiche_html;
+
+            var info = '<h4>'+nome+'<br><span class="m_text">'+specialita+'</span></h4><p>'+desc+'</p>';
+
+            $('#info').html(info);
+
+            $("#awards").html(awards);
+            $("#qual").html(qualifiche);
+
+            callback();
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}
