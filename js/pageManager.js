@@ -56,7 +56,7 @@ function manager(href) {
                 getCategorie(function () { clickPageLinks(); });
                 break;
             case 'classes_al':
-                getCorsi(special,function () { clickPageLinks(); });
+                getCorsi(function () { clickPageLinks(); });
                 break;
             case 'classes_lvl':
                 getCorsiPerLivello(function () { clickPageLinks(); });
