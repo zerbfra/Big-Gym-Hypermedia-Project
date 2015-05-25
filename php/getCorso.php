@@ -28,6 +28,9 @@ else {
         //echo json_encode($myArray);
     }
 
+    //free result
+    $result->close();
+
     $query = "SELECT * FROM orari_corso WHERE corso=".$id;
     //query execution
     $result = $mysqli->query($query);
@@ -42,6 +45,8 @@ else {
 
     }
 
+    //free result
+    $result->close();
 
     $query = "SELECT * FROM speciali_corso WHERE corso=".$id;
     //query execution

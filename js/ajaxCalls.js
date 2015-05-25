@@ -188,7 +188,8 @@ function getIstruttore(id,callback){
 
 
             var json=JSON.parse(response);
-            var istruttore = json; // per ora
+            var istruttore = json.info;
+            var corsi = json.courses;
 
             nome = istruttore[0].nome;
             specialita = istruttore[0].specialita;
@@ -198,10 +199,18 @@ function getIstruttore(id,callback){
 
             var info = '<h4>'+nome+'<br><span class="m_text">'+specialita+'</span></h4><p>'+desc+'</p>';
 
-            $('#info').html(info);
+            var el='<ul class="blog-list"><h4>Corsi</h4>';
+            for(var i=0;i<corsi.length;i++){
+                el+='<li><a class="interactive_link" href="#single_class&'+corsi[i].id+'">'+corsi[i].nome+'</a></li>';
+            }
+            el+='</ul>';
 
+
+
+            $('#info').html(info);
             $("#awards").html(awards);
             $("#qual").html(qualifiche);
+            $('#courses').html(el);
 
             callback();
         },

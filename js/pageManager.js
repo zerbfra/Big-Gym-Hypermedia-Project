@@ -18,7 +18,7 @@ $('#menu_nav li:not(#submenu)').on('click', function(){
 // for all links in main pages
 function clickPageLinks() {
     $('.interactive_link').on('click', function(){
-
+        console.log('Inner page link clicked');
         // get the href attribute of the link
         var href = $(this).attr('href');
         // manage the page, loading what you want inside the main div
@@ -72,7 +72,8 @@ function manager(href) {
         }
         //************** END SPECIFIC PAGE FUNCTIONS ***********//
 
-
+        // scroll to top when loading a new page
+        window.scrollTo(0,0);
 
 
         });
