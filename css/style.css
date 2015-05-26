@@ -94,97 +94,44 @@ body a{
 }
 .header-bottom_left {
 	float: left;
+    margin-top: -8px;
 }
 
-i.phone {
-	background: url(../images/img-sprite.png) no-repeat -220px -8px;
-	width: 20px;
-	height: 20px;
-	float: left;
-	margin-right: 10px;
-}
+
 .header-bottom_left span {
 	color: #C0EEFF;
 	font-size: 0.85em;
 }
 .social{
 	float: right;
+    color: #fff;
+    margin-top: -8px;
 }
-.social ul{
-	margin:0;
-	padding:0;
+
+.social a {
+    padding-right: 10px;
+    color: #fff;
 }
-.social ul li:first-child, ol li:first-child {
-	margin-top: 0px;
-	margin-left: 0;
+
+.social a:hover{
+	text-decoration: none;
 }
-.social li {
-	background: none;
-	display: inline-block;
+
+.social_footer{
+	float: right;
+    color: #fff;
+    margin-top:4px;
 }
-li.facebook a span {
-	height: 25px;
-	width: 25px;
-	display: block;
-	background: url(../images/img-sprite.png)no-repeat -250px -10px;
+
+.social_footer a {
+    padding-right: 10px;
+    color: #fff;
 }
-li.facebook a span:hover{
-	background: url(../images/img-sprite.png)no-repeat -8px -207px #FFF;
+
+.social_footer a:hover{
+	text-decoration: none;
 }
-li.twitter a span {
-	height: 25px;
-	width: 25px;
-	display: block;
-	background: url(../images/img-sprite.png)no-repeat -276px -10px;
-}
-li.twitter a span:hover{
-	background: url(../images/img-sprite.png)no-repeat -33px -207px #FFF;
-}
-li.pinterest a span {
-	height: 25px;
-	width: 25px;
-	display: block;
-	background: url(../images/img-sprite.png)no-repeat -304px -10px;
-}
-li.pinterest a span:hover{
-	background: url(../images/img-sprite.png)no-repeat -63px -207px #FFF;
-}
-li.google a span {
-	height: 25px;
-	width: 25px;
-	display: block;
-	background: url(../images/img-sprite.png)no-repeat -332px -10px;
-}
-li.google a span:hover{
-	background: url(../images/img-sprite.png)no-repeat -91px -207px #FFF;
-}
-li.tumblr a span {
-	height: 25px;
-	width: 25px;
-	display: block;
-	background: url(../images/img-sprite.png)no-repeat -361px -10px;
-}
-li.tumblr a span:hover{
-	background: url(../images/img-sprite.png)no-repeat -119px -207px #fff;
-}
-li.instagram a span {
-	height: 25px;
-	width: 25px;
-	display: block;
-	background: url(../images/img-sprite.png)no-repeat -389px -10px;
-}
-li.instagram a span:hover{
-	background: url(../images/img-sprite.png)no-repeat -146px -207px #fff;
-}
-li.rss a span {
-	height: 25px;
-	width: 25px;
-	display: block;
-	background: url(../images/img-sprite.png)no-repeat -418px -10px;
-}
-li.rss a span:hover{
-	background: url(../images/img-sprite.png)no-repeat -176px -207px #fff;
-}
+
 .menu{
 	padding: 2% 0 1.8% 0;
 	background: #72D0F4;
