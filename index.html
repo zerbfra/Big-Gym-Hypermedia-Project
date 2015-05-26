@@ -25,10 +25,6 @@
          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=false"></script>
 
 
-        <!-- grid-slider -->
-        <script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
-        <!-- //grid-slider -->
-
 
 
 
@@ -43,8 +39,6 @@
 
                 // default behaviour: load homepage
                 $(".main").load( "home.html", function() {
-                    // carousel only for home page
-                    $('#ca-container').contentcarousel();
                     // after loading the page we should load the page manager for links (header + main div, footer doesn't contain links)
                     $.getScript('js/pageManager.js', function() {
                         // load dynamic links (index.html)

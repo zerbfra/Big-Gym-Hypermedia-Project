@@ -50,7 +50,6 @@ function manager(href) {
         // the callback function
         switch (page) {
             case 'home':
-                $('#ca-container').contentcarousel(); // carousel
                 // scripts for "static" content
                 $.getScript('js/staticCalls.js', function() {
                         getInfo('2');
