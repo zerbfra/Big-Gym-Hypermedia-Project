@@ -195,6 +195,11 @@ li.rss a span:hover{
 .logo{
 	float:left;
 }
+
+#logo_img {
+    width: 145px;
+    height: 40px;
+}
 /* start h_menu */
 .h_menu4{
 	float:right;
