@@ -341,17 +341,15 @@ function drawEntryCorso(last,object) {
 
     // non è ultimo
     if(last == false) {
-        el+='<div class="cardio_sublist"><ul class="cardio"><li><i class="clock"> </i><span>'+object.nome+'</span></li></ul>';
-        el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+object.id+'"> </a></span></li></ul>';
-
+        el+='<div class="cardio_sublist"><ul class="cardio"><li><span><i class="fa fa-clock-o"></i>&nbsp;&nbsp;&nbsp;'+object.nome+'</span></li></ul>';
+        el+='<div class="social-media"><ul><li><span class="badge" style="background-color:#00bff0; color:#fff">'+object.livello+'</span></li><li><a class="interactive_link" href="#single_class&'+object.id+'"><span class="badge" style="background-color:#fff; color:#00bff0">Vedi</span></a></li></ul>';
         el+='</div><div class="clear"></div></div>';
 
     } else {
 
-            el+='<div class="cardio_sublist_last"><ul class="cardio"><li><i class="clock"> </i><span>'+object.nome+'</span></li></ul>';
-            el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+object.id+'"> </a></span></li></ul>';
-
-            el+='</div><div class="clear"></div></div>';
+        el+='<div class="cardio_sublist_last"><ul class="cardio"><li><i class="clock"> </i><span>'+object.nome+'</span></li></ul>';
+        el+='<div class="social-media"><ul><li><span class="badge" style="background-color:#00bff0; color:#fff">'+object.livello+'</span></li><li><a class="interactive_link" href="#single_class&'+object.id+'"><span class="badge" style="background-color:#fff; color:#00bff0">Vedi</span></a></li></ul>';
+        el+='</div><div class="clear"></div></div>';
 
     }
 
