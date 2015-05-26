@@ -46,7 +46,10 @@
                     // carousel only for home page
                     $('#ca-container').contentcarousel();
                     // after loading the page we should load the page manager for links (header + main div, footer doesn't contain links)
-                    $.getScript('js/pageManager.js');
+                    $.getScript('js/pageManager.js', function() {
+                        // load dynamic links (index.html)
+                        clickPageLinks();
+                    });
 
                     // scripts for "static" content
                     $.getScript('js/staticCalls.js', function() {

@@ -58,6 +58,9 @@ function manager(href) {
                         getInfo('4');
                         getInfo('5');
                 });
+
+                clickPageLinks();
+
                 break;
             case 'categories':
                 getCategorie(function () { clickPageLinks(); });
