@@ -47,9 +47,25 @@
                     $('#ca-container').contentcarousel();
                     // after loading the page we should load the page manager for links (header + main div, footer doesn't contain links)
                     $.getScript('js/pageManager.js');
+
+                    // scripts for "static" content
+                    $.getScript('js/staticCalls.js', function() {
+                        getInfo('2');
+                        getInfo('3');
+                        getInfo('4');
+                        getInfo('5');
+                    });
+
                 });
 
-                $(".footer").load("footer.html");
+                $(".footer").load("footer.html", function() {
+
+                    $.getScript('js/staticCalls.js', function() {
+                        getInfo('1');
+                    });
+
+
+                });
             });
         </script>
 

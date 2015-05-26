@@ -51,6 +51,13 @@ function manager(href) {
         switch (page) {
             case 'home':
                 $('#ca-container').contentcarousel(); // carousel
+                // scripts for "static" content
+                $.getScript('js/staticCalls.js', function() {
+                        getInfo('2');
+                        getInfo('3');
+                        getInfo('4');
+                        getInfo('5');
+                });
                 break;
             case 'categories':
                 getCategorie(function () { clickPageLinks(); });
@@ -72,6 +79,9 @@ function manager(href) {
                 break;
             case 'single_trainer':
                 getIstruttore(special,function () { clickPageLinks(); });
+                break;
+            case 'contact':
+                getInfo('6');
                 break;
             default:
                 clickPageLinks();
