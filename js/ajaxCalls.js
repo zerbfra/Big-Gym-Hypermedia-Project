@@ -220,7 +220,7 @@ function getCorso(id,callback){
 
             var el='';
             for(var i=0;i<orari.length;i++){
-                el+='<li><i class="calender"></i><span class="week_class">'+orari[i].giorno+'</span><div class="hours_class">'+orari[i].orario+'</div><div class="clear"></div></li>';
+                el+='<li><span class="week_class"><i class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;'+orari[i].giorno+'</span><div class="hours_class">'+orari[i].orario+'</div><div class="clear"></div></li>';
             }
 
             $("#times").html(el);
@@ -228,7 +228,7 @@ function getCorso(id,callback){
 
             var el='';
             for(var i=0;i<speciali.length;i++){
-                el+='<li>'+speciali[i].testo+'</li>';
+                el+='<li><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;&nbsp;'+speciali[i].testo+'</li>';
             }
 
             $("#specials").html(el);
@@ -310,7 +310,7 @@ function getIstruttore(id,callback){
 
             var el='<ul class="blog-list"><h4>Corsi</h4>';
             for(var i=0;i<corsi.length;i++){
-                el+='<li><a class="interactive_link" href="#single_class&'+corsi[i].id+'">'+corsi[i].nome+'</a></li>';
+                el+='<li><a class="interactive_link" href="#single_class&'+corsi[i].id+'"><i class="fa fa-chevron-right"></i>&nbsp;'+corsi[i].nome+'</a></li>';
             }
             el+='</ul>';
 
