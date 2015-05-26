@@ -238,15 +238,19 @@ function getCorso(id,callback){
 
             var istruttore = json.trainer;
 
+            immagine = corso[0].immagine;
             nome = corso[0].nome;
             desc = corso[0].descrizione;
             sala = corso[0].sala;
 
             var more  = '<h3 class="m_13">Istruttore e sala</h3><a href="#single_trainer&'+istruttore[0].id+'" class="interactive_link"><img src="images/'+istruttore[0].img_small+'" class="img-responsive" alt=""/><h4>'+istruttore[0].nome+'</a><br><span class="m_text">Sala '+sala+'</span></h4>';
 
+            var image = '<img src="images/'+immagine+'" alt=""/>';
+
             $("#name").html(nome);
             $("#description").html(desc);
             $("#more").html(more);
+            $("#course_img").html(image)
 
             var el='';
             for(var i=0;i<orari.length;i++){
@@ -330,9 +334,13 @@ function getIstruttore(id,callback){
             desc = istruttore[0].descrizione;
             awards = istruttore[0].awards_html;
             qualifiche = istruttore[0].qualifiche_html;
+            immagine = istruttore[0].img;
 
             var top ='<h1 class="m_11">ISTRUTTORI<span class="class_1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '+nome+'</span></h1>';
             var info = '<h4>'+nome+'<br><span class="m_text">'+specialita+'</span></h4><p>'+desc+'</p>';
+
+            var image = '<img src="images/'+immagine+'" alt=""/>';
+
 
             var el='<ul class="blog-list"><h4>Corsi</h4>';
             for(var i=0;i<corsi.length;i++){
@@ -346,6 +354,7 @@ function getIstruttore(id,callback){
             $("#awards").html(awards);
             $("#qual").html(qualifiche);
             $('#courses').html(el);
+            $('#trainer_img').html(image);
 
             callback();
         },
