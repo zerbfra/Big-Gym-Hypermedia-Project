@@ -511,7 +511,7 @@ h3.m_4{
 }
 .social-media li{
 	float:left;
-	margin: 0px 4px 0px 0;
+	margin: 0px 4px 0px 10px;
 	display:inline-block;
 }
 .social-media li a {
