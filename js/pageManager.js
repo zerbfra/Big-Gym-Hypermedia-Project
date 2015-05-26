@@ -95,4 +95,4 @@ function manager(href) {
 
 
         });
-        }
+}

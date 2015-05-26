@@ -59,18 +59,13 @@ function getCorsiCat(category,callback) {
             var el='<div class="cardio_list">';
             for(var i=0;i<corsi.length-1;i++){
 
-                el+='<div class="cardio_sublist"><ul class="cardio"><li><i class="clock"> </i><span>'+corsi[i].nome+'</span></li></ul>';
-                el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+corsi[i].id+'"> </a></span></li></ul>';
-
-                el+='</div><div class="clear"></div></div>';
+                var toPrint = corsi[i];
+                el += drawEntryCorso(false,toPrint);
 
             }
             // last one (different css)
-
-            el+='<div class="cardio_sublist_last"><ul class="cardio"><li><i class="clock"> </i><span>'+corsi[corsi.length-1].nome+'</span></li></ul>';
-            el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+corsi[corsi.length-1].id+'"> </a></span></li></ul>';
-
-            el+='</div><div class="clear"></div></div>';
+            var toPrint = corsi[corsi.length-1];
+            el +=drawEntryCorso(true,toPrint);
 
             el+='</div><div class="clear"></div>';
 
@@ -101,18 +96,15 @@ function getCorsi(callback){
             var el='<div class="cardio_list">';
             for(var i=0;i<corsi.length-1;i++){
 
-                el+='<div class="cardio_sublist"><ul class="cardio"><li><i class="clock"> </i><span>'+corsi[i].nome+'</span></li></ul>';
-                el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+corsi[i].id+'"> </a></span></li></ul>';
-
-                el+='</div><div class="clear"></div></div>';
+                var toPrint = corsi[i];
+                el += drawEntryCorso(false,toPrint);
 
             }
             // last one (different css)
 
-            el+='<div class="cardio_sublist_last"><ul class="cardio"><li><i class="clock"> </i><span>'+corsi[corsi.length-1].nome+'</span></li></ul>';
-            el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+corsi[corsi.length-1].id+'"> </a></span></li></ul>';
-
-            el+='</div><div class="clear"></div></div>';
+            // last one (different css)
+            var toPrint = corsi[corsi.length-1];
+            el +=drawEntryCorso(true,toPrint);
 
             el+='</div><div class="clear"></div>';
 
@@ -147,64 +139,38 @@ function getCorsiPerLivello(callback){
             // ***** BASE *********//
             var elBase='<div class="cardio_list">';
             for(var i=0;i<base.length-1;i++){
-
-                elBase+='<div class="cardio_sublist"><ul class="cardio"><li><i class="clock"> </i><span>'+base[i].nome+'</span></li></ul>';
-                elBase+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+base[i].id+'"> </a></span></li></ul>';
-
-                elBase+='</div><div class="clear"></div></div>';
-
+                var toPrint = base[i];
+                elBase += drawEntryCorso(false,toPrint);
             }
             // last one (different css)
-
-            elBase+='<div class="cardio_sublist_last"><ul class="cardio"><li><i class="clock"> </i><span>'+base[base.length-1].nome+'</span></li></ul>';
-            elBase+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+base[base.length-1].id+'"> </a></span></li></ul>';
-
-            elBase+='</div><div class="clear"></div></div>';
-
+            var toPrint = base[base.length-1];
+            elBase +=drawEntryCorso(true,toPrint);
             elBase+='</div><div class="clear"></div>';
 
             // ***** MEDIO *********//
             var elMedio='<div class="cardio_list">';
             for(var i=0;i<medio.length-1;i++){
-
-                elMedio+='<div class="cardio_sublist"><ul class="cardio"><li><i class="clock"> </i><span>'+medio[i].nome+'</span></li></ul>';
-                elMedio+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+medio[i].id+'"> </a></span></li></ul>';
-
-                elMedio+='</div><div class="clear"></div></div>';
-
+                var toPrint = medio[i];
+                elMedio += drawEntryCorso(false,toPrint);
             }
             // last one (different css)
-
-            elMedio+='<div class="cardio_sublist_last"><ul class="cardio"><li><i class="clock"> </i><span>'+medio[medio.length-1].nome+'</span></li></ul>';
-            elMedio+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+medio[medio.length-1].id+'"> </a></span></li></ul>';
-
-            elMedio+='</div><div class="clear"></div></div>';
-
+            var toPrint = medio[medio.length-1];
+            elMedio +=drawEntryCorso(true,toPrint);
             elMedio+='</div><div class="clear"></div>';
 
             // ***** AVANZATO *********//
             var elAvanzato='<div class="cardio_list">';
             for(var i=0;i<avanzato.length-1;i++){
-
-                elAvanzato+='<div class="cardio_sublist"><ul class="cardio"><li><i class="clock"> </i><span>'+avanzato[i].nome+'</span></li></ul>';
-                elAvanzato+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+avanzato[i].id+'"> </a></span></li></ul>';
-
-                elAvanzato+='</div><div class="clear"></div></div>';
-
+                var toPrint = avanzato[i];
+                elAvanzato += drawEntryCorso(false,toPrint);
             }
             // last one (different css)
-
-            elAvanzato+='<div class="cardio_sublist_last"><ul class="cardio"><li><i class="clock"> </i><span>'+avanzato[avanzato.length-1].nome+'</span></li></ul>';
-            elAvanzato+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+avanzato[avanzato.length-1].id+'"> </a></span></li></ul>';
-
-            elAvanzato+='</div><div class="clear"></div></div>';
-
+            var toPrint = avanzato[avanzato.length-1];
+            elAvanzato +=drawEntryCorso(true,toPrint);
             elAvanzato+='</div><div class="clear"></div>';
 
 
             // FINITO, CARICO TUTTO NELLE VARIE DIV
-
-
             $("#base").html(elBase);
             $("#medio").html(elMedio);
             $("#avanzato").html(elAvanzato);
@@ -363,5 +329,32 @@ function getIstruttore(id,callback){
             console.log("Error");
         }
     });
+
+}
+
+
+/***** DRAWING FUNCTIONS *******/
+
+// Funzione per disegnare una entry di un corso
+function drawEntryCorso(last,object) {
+    var el ='';
+
+    // non è ultimo
+    if(last == false) {
+        el+='<div class="cardio_sublist"><ul class="cardio"><li><i class="clock"> </i><span>'+object.nome+'</span></li></ul>';
+        el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+object.id+'"> </a></span></li></ul>';
+
+        el+='</div><div class="clear"></div></div>';
+
+    } else {
+
+            el+='<div class="cardio_sublist_last"><ul class="cardio"><li><i class="clock"> </i><span>'+object.nome+'</span></li></ul>';
+            el+='<div class="social-media"><ul><li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li><li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li><li><span class="interactive_link simptip-position-bottom simptip-movable" data-tooltip="vedi"><a class="interactive_link" href="#single_class&'+object.id+'"> </a></span></li></ul>';
+
+            el+='</div><div class="clear"></div></div>';
+
+    }
+
+    return el;
 
 }
