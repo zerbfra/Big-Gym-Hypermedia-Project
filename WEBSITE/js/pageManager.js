@@ -81,6 +81,7 @@ function manager(href) {
                 break;
             case 'single_trainer':
                 getIstruttore(special,function () { clickPageLinks(); });
+                getTweets();
                 break;
             case 'contact':
                 getInfo('6');

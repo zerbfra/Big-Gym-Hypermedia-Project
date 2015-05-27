@@ -333,6 +333,34 @@ function getIstruttore(id,callback){
 }
 
 
+function getTweets(){
+
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://zerbinatifrancesco.it/hypermedia/php/getTwitter.php", //Relative or absolute path to file.php file
+        success: function(response) {
+
+            var tweets=JSON.parse(response);
+            var el='<ul class="recent-list"><h4>Twitter</h4>';
+            for(var i=0;i<tweets.length;i++){
+
+                el+='<li>'+tweets[i]+'</li>';
+
+            }
+            el+='</ul>';
+            $("#twitter_feed").html(el);
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}
+
+
 /***** DRAWING FUNCTIONS *******/
 
 // Funzione per disegnare una entry di un corso
