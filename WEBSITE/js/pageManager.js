@@ -36,16 +36,19 @@ function clickPageLinks() {
         // get the page (0 in the array of args)
         var page = args.split('&')[0];
 
-        // the element in the header to highlight is a li element that contain as class the "pagename"_page
-        var newElm = $('li[class*="'+page+'_page"]');
+        if(page!='') {
 
-        // remove class from the previous active menu element
-        var prevElm = $('li[class*="active"]');
-        prevElm.removeClass('active');
+            // the element in the header to highlight is a li element that contain as class the "pagename"_page
+            var newElm = $('li[class*="'+page+'_page"]');
 
-        newElm.addClass('active');
+            // remove class from the previous active menu element
+            var prevElm = $('li[class*="active"]');
+            prevElm.removeClass('active');
 
-        manager(args);
+            newElm.addClass('active');
+
+            manager(args);
+        }
 
 
 
@@ -77,10 +80,10 @@ function manager(args) {
             case 'home':
                 // scripts for "static" content
                 $.getScript('js/staticCalls.js', function() {
-                        getInfo('2');
-                        getInfo('3');
-                        getInfo('4');
-                        getInfo('5');
+                    getInfo('2');
+                    getInfo('3');
+                    getInfo('4');
+                    getInfo('5');
                 });
 
                 clickPageLinks();
@@ -120,5 +123,5 @@ function manager(args) {
         window.scrollTo(0,0);
 
 
-        });
+    });
 }
