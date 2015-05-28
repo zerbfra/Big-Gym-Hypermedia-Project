@@ -1,22 +1,23 @@
 // for all <li> elements in menu expect for submenus
 $('#menu_nav li:not(#submenu)').on('click', function(){
     // remove the css to the previous selected, add to the new one
-    $('.active').removeClass('active');
-    $(this).addClass('active');
+    //$('.active').removeClass('active');
+    //$(this).addClass('active');
 
     // collapse the menu
     slideMenu();
 
     // get the href attribute of the link
-    var href = $(this).children().attr('href');
+    //var href = $(this).children().attr('href');
     // manage the page, loading what you want inside the main div
-    manager(href);
+    //manager(href);
 
 });
 
 
 // for all links in main pages
 function clickPageLinks() {
+    /*
     $('.interactive_link').on('click', function(){
         console.log('Inner page link clicked');
         // get the href attribute of the link
@@ -24,15 +25,39 @@ function clickPageLinks() {
         // manage the page, loading what you want inside the main div
         manager(href);
 
-    });
+    });*/
+
+    window.onpopstate = function() {
+        var url = window.location.href;
+
+        // extract the string after #
+        var args = url.split('#')[1];
+
+        // get the page (0 in the array of args)
+        var page = args.split('&')[0];
+
+        // the element in the header to highlight is a li element that contain as class the "pagename"_page
+        var newElm = $('li[class*="'+page+'_page"]');
+
+        // remove class from the previous active menu element
+        var prevElm = $('li[class*="active"]');
+        prevElm.removeClass('active');
+
+        newElm.addClass('active');
+
+        manager(args);
+
+
+
+    };
+
 }
 
 
-function manager(href) {
+function manager(args) {
 
     // get the actual page name
-    var params = href.substr(1);
-    var parts = params.split('&');
+    var parts = args.split('&');
     var page = parts[0];
     // special is an additional parameter to render the same page in different ways
     // for istance, single_class.html can contains different informations based on
