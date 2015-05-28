@@ -617,10 +617,19 @@ h4.m_3{
 	color: #00BFF0;
 	text-decoration: none;
 }
-/*--content-middle-botoom--*/
+
+
 .content_middle_bottom {
 	padding-top:7%;
 }
+
+
+@media screen and (max-width: 768px) {
+    .content_middle_bottom {
+        display:none;
+    }
+}
+
 #flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
 	display: none;
 }
