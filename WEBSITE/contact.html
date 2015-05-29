@@ -1,4 +1,36 @@
 <script>
+
+    function manageForm() {
+        $("#submit").click(function() {
+            post_data = {
+                nome    : $('#nome').val(),
+                email  : $('#email').val(),
+                oggetto : $('#oggetto').val(),
+                testo   : $('#testo').val(),
+            };
+
+            console.log(post_data);
+            $.ajax({
+                method: "POST",
+                crossDomain: true, //localhost purposes
+                url: "http://zerbinatifrancesco.it/hypermedia/php/sendMail.php",
+                data: post_data,
+                success: function(response) {
+                    var message=JSON.parse(response);
+                    alert(message.text);
+                },
+                error: function(request,error)
+                {
+                    console.log("Error");
+                }
+            });
+
+
+
+
+        });
+    }
+
     function initializeMap() {
         var myLatlng = new google.maps.LatLng(45.4773533,9.2343561);
         var mapOptions = {
@@ -16,7 +48,11 @@
         });
     }
 
+    // manage Google Maps
     initializeMap();
+    // manage contact form
+    manageForm();
+
 </script>
 
 <div class="main">
@@ -29,22 +65,23 @@
         <div class="container">
             <div class="col-md-8 contact-top">
                 <h3>Inviaci un messaggio</h3>
-                <p class="contact_msg">Se desideri puoi contattarci tramite questo modulo, non esitare a chiederci qualsiasi informazione, il nostro staff risponderà prontamente entro poche ore!</p>
-                <form method="post" action="#">
-                    <div class="to">
-                        <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-                        <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:20px">
-                        <input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left:20px">
-                    </div>
-                    <div class="text">
-                        <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
-                    </div>
-                    <div class="form-submit1">
-                        <input name="submit" type="submit" id="submit" value="Invia"><br>
-                       <p></p>
-                    </div>
-                    <div class="clear"></div>
-                </form>
+                <p class="contact_msg">Se desideri puoi contattarci tramite questo modulo,
+                    non esitare a chiederci qualsiasi informazione, il nostro staff risponderà prontamente entro poche ore!</p>
+
+                <div class="to">
+                    <input type="text" class="text" placeholder="Nome" id="nome" required>
+                    <input type="text" class="text" placeholder="Email" id="email" type="email" style="margin-left:20px" required>
+                    <input type="text" class="text" placeholder="Oggetto" id="oggetto" style="margin-left:20px" required>
+                </div>
+                <div class="text">
+                    <textarea id="testo" placeholder="Messaggio" required></textarea>
+                </div>
+                <div class="form-submit1">
+                    <input name="submit" type="submit" id="submit" value="Invia"><br>
+                    <p></p>
+                </div>
+                <div class="clear"></div>
+
             </div>
             <div class="col-md-4 contact-top_right">
                 <h3>Informazioni</h3>

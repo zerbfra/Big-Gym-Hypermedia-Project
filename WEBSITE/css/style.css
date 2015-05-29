@@ -3025,9 +3025,9 @@ p.contact_msg{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 0.95em;
 	font-weight: normal;
-	padding: 10px 34px 10px 10px;
+	padding: 10px 10px 10px 10px;
 	text-transform: uppercase;
-	background: url(../images/submit_arrow.png)no-repeat 180px 13px #E25050;
+	background:  #E25050;
 	display: inline-block;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
@@ -3039,7 +3039,7 @@ p.contact_msg{
 	cursor: pointer;
 }
 .form-submit1 input[type="submit"]:hover {
-	background: url(../images/submit_arrow.png)no-repeat 180px 13px #555;
+	background:  #555;
 }
 p.m_msg{
 	color:#B4EDFC;
