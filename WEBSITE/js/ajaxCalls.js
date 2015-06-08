@@ -294,6 +294,7 @@ function getIstruttore(id,callback){
             var json=JSON.parse(response);
             var istruttore = json.info;
             var corsi = json.courses;
+            var num_istruttori = parseInt(json.num_istruttori[0].totali);
 
             nome = istruttore[0].nome;
             specialita = istruttore[0].specialita;
@@ -314,6 +315,18 @@ function getIstruttore(id,callback){
             }
             el+='</ul>';
 
+            idInt = parseInt(id);
+            next = idInt+1;
+            prev = idInt-1;
+
+            // manage the gt links: limits
+            if(next == num_istruttori+1) next = 1;
+            if(prev == 0) prev = num_istruttori;
+
+            var gt = '<ul class="gt-list">';
+            gt+= '<a href="#single_trainer&'+prev+'" class="interactive_link"><li class="gt_but">Precedente</li></a>';
+            gt+=  '<a href="#single_trainer&'+next+'" class="interactive_link"> <li class="gt_but">Successivo</li></a>';
+            gt+='</ul>';
 
             $('.about_banner_wrap').html(top);
             $('#info').html(info);
@@ -321,6 +334,7 @@ function getIstruttore(id,callback){
             $("#qual").html(qualifiche);
             $('#courses').html(el);
             $('#trainer_img').html(image);
+            $('#pulsanti').html(gt);
 
             callback();
         },

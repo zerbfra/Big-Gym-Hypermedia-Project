@@ -2386,6 +2386,17 @@ ul.blog-list{
 	padding: 6%;
 	margin-bottom:8%;
 }
+
+ul.gt-list{
+	background: clear;
+	padding: 6%;
+	margin-bottom:8%;
+    list-style: none;
+    text-align: center;
+
+}
+
+
 ul.blog-list h4, ul.recent-list h4{
 	color:#fff;
 	font-size:1.1em;
@@ -2870,6 +2881,38 @@ li.price_but:hover{
 	background:#fff;
 	color:#00BFF0;
 }
+
+
+
+li.gt_but{
+	background: #00BFF0;
+	font-size: 0.85em;
+	padding:10px 20px;
+	color: #FFF;
+	cursor: pointer;
+	outline: none;
+	-webkit-appearance: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border: 1px solid #FFF;
+	text-transform: uppercase;
+	text-decoration: none;
+    text-align: center;
+	width: 50%;
+     display: inline;
+	margin: 5% auto;
+}
+li.gt_but:hover{
+	background:#fff;
+	color:#00BFF0;
+}
+
+
 h2.m_25 {
 	font-size: 3em;
 	color: #FFF;

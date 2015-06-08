@@ -44,13 +44,31 @@ else {
 
     }
 
+    //free result
+    $result->close();
+
+    $query = "SELECT COUNT(*) as totali FROM istruttori";
+
+    //query execution
+    $result = $mysqli->query($query);
+    //if there are data available
+    if($result->num_rows >0)
+    {
+        $myArray = array();//create an array
+        while($row = $result->fetch_array(MYSQL_ASSOC)) {
+            $numero[] = array_map('utf8_encode', $row);
+        }
+    }
 
     //free result
     $result->close();
+
+
+
     //close connection
     $mysqli->close();
 
-    echo json_encode(array('info'=>$info, 'courses'=>$courses));
+    echo json_encode(array('info'=>$info, 'courses'=>$courses,'num_istruttori'=>$numero));
 
 
 
