@@ -3,43 +3,43 @@
 
 This is the repository for my project of the Hypermedia Applications (web and multimedia) course, academic year 2014/15.
 
-##Homepage
+###Homepage
 
 * Aggiunti link a corsi migliori, con relative immagini
 * Rimossi testimonials a favore di una div per più partner
 * Aggiunto un box per eventuali promozioni
 
-##Corsi
+###Corsi
 
 * Rivista la modalità di interazione: ora previsto un submenu invece di una pagina con selettori
 
-##Elenco categorie
+###Elenco categorie
 
 * Aggiunta una breve descrizione per ogni categoria, rimangono comunque i link alla descrizione e ai corsi
 
-##Iscrizioni
+###Iscrizioni
 
 * Realizzata, anche se non richiesta, la pagina riguardante le informazioni sui prezzi
 
-##Istruttori
+###Istruttori
 
 * Come richiesto, realizzata solo la pagina degli istruttori in ordine alfabetico
 * Nell'implementazione compaiono, per ogni istruttore, sia i corsi che i ruoli
 
-##Pagina istruttore
+###Pagina istruttore
 
 * Modificata l'impaginazione
 * Feed twitter del mio account personale (@zerbfra)
 
 
-##Contatti
+###Contatti
 
 * Rivista l'impaginazione
 * Dove siamo e Contattaci sono ora in un unica pagina
 * Il form è funzionante e invia una mail al mio indirizzo personale
 * Le informazioni sulla location sono visibili in tutte le pagine in quanto contenute nel footer
 
-#Note
+##Note
 
 Sono stati rimossi i link "Index" in quanto causavano ridondanza al sito: in particolare, avendo innestato alcuni link nel menu principale, e avendo mantenuto i link guided tours nella pagina dell'istruttore,
 è come se i link "Index" per tornare alla pagina precedente siano ora Landmarks. Mi sembrava ridontante includere un link identico a quello dell'header all'interno della pagina.
