@@ -29,6 +29,13 @@ _PhoneGap Build_
 
 The PhoneGap Build is available [here](https://build.phonegap.com/apps/1475653/share) 
 
+_Optionals_
+
+* Google Maps API
+* Twitter API
+* Form (general info) + mail
+
+
 ###Homepage
 
 * Aggiunti link a corsi migliori, con relative immagini
