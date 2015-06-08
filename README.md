@@ -38,3 +38,8 @@ This is the repository for my project of the Hypermedia Applications (web and mu
 * Dove siamo e Contattaci sono ora in un unica pagina
 * Il form è funzionante e invia una mail al mio indirizzo personale
 * Le informazioni sulla location sono visibili in tutte le pagine in quanto contenute nel footer
+
+#Note
+
+Sono stati rimossi i link "Index" in quanto causavano ridondanza al sito: in particolare, avendo innestato alcuni link nel menu principale, e avendo mantenuto i link guided tours nella pagina dell'istruttore,
+è come se i link "Index" per tornare alla pagina precedente siano ora Landmarks. Mi sembrava ridontante includere un link identico a quello dell'header all'interno della pagina.
