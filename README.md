@@ -3,13 +3,13 @@
 
 This is the repository for my project of the Hypermedia Applications (web and multimedia) course, academic year 2014/15.
 
-_Used frameworks:_
+_Used frameworks_
 
 * jQuery 2.1.4
 * BootStrap 3.3.4
 * FontAwesome 4.3.0
 
-_Theme:_
+_Theme_
 
 * I used an old HTML/CSS theme that wasn't really responsive and I needed to adapt it to properly work.
 * I made some changes to the CSS
@@ -23,6 +23,10 @@ _Logic/MVC Pattern_
 * The links are handled by pageManager.js 
 * All the external JSON calls are made via axajCalls.js
 * The menu behaviours are managed via nav.js
+
+_PhoneGap Build_
+
+The PhoneGap Build is available [here](https://build.phonegap.com/apps/1475653/share) 
 
 ###Homepage
 
