@@ -3,6 +3,27 @@
 
 This is the repository for my project of the Hypermedia Applications (web and multimedia) course, academic year 2014/15.
 
+_Used frameworks:_
+
+* jQuery 2.1.4
+* BootStrap 3.3.4
+* FontAwesome 4.3.0
+
+_Theme:_
+
+* I used an old HTML/CSS theme that wasn't really responsive and I needed to adapt it to properly work.
+* I made some changes to the CSS
+* I added several new classes to the CSS
+* The layout was revisited in order to adopt an header/main/footer approach
+
+_Logic/MVC Pattern_
+
+* All the data are queried on a remote database via PHP scripts (contained in WEBSITE/php folder)
+* jQuery handles all the links and display in the main section the content based on the passed parameters, the link structure is /#page&param
+* The links are handled by pageManager.js 
+* All the external JSON calls are made via axajCalls.js
+* The menu behaviours are managed via nav.js
+
 ###Homepage
 
 * Aggiunti link a corsi migliori, con relative immagini
@@ -42,4 +63,6 @@ This is the repository for my project of the Hypermedia Applications (web and mu
 ##Note
 
 Sono stati rimossi i link "Index" in quanto causavano ridondanza al sito: in particolare, avendo innestato alcuni link nel menu principale, e avendo mantenuto i link guided tours nella pagina dell'istruttore,
-è come se i link "Index" per tornare alla pagina precedente siano ora Landmarks. Mi sembrava ridontante includere un link identico a quello dell'header all'interno della pagina.
+è come se i link "Index" per tornare alla pagina precedente siano ora Landmarks.
+
+Mi sembrava ridontante includere un link identico a quello dell'header all'interno della pagina.

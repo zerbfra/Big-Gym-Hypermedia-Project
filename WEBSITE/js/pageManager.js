@@ -1,31 +1,12 @@
 // for all <li> elements in menu expect for submenus
 $('#menu_nav li:not(#submenu)').on('click', function(){
-    // remove the css to the previous selected, add to the new one
-    //$('.active').removeClass('active');
-    //$(this).addClass('active');
-
     // collapse the menu
     slideMenu();
-
-    // get the href attribute of the link
-    //var href = $(this).children().attr('href');
-    // manage the page, loading what you want inside the main div
-    //manager(href);
-
 });
 
 
 // for all links in main pages
 function clickPageLinks() {
-    /*
-    $('.interactive_link').on('click', function(){
-        console.log('Inner page link clicked');
-        // get the href attribute of the link
-        var href = $(this).attr('href');
-        // manage the page, loading what you want inside the main div
-        manager(href);
-
-    });*/
 
     window.onpopstate = function() {
         var url = window.location.href;
