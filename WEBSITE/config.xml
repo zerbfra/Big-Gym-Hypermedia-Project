@@ -23,8 +23,8 @@
     <preference name="StatusBarStyle" value="lightcontent" />
 
 
-    <!-- iPhone 6 / 6+ icon -->
+    <!-- iPhone 6 / 6+ icon and splash -->
     <icon src="images/icon.png" gap:platform="ios" width="180" height="180" />
-    <gap:splash src="images/splash.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="images/splash.png" gap:platform="ios" width="750" height="1334" />
 
 </widget>
