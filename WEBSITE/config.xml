@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "it.zerbinatifrancesco.biggym"
+        version   = "1.0.0">
+
+    <name>Big Gym</name>
+
+    <description>
+       Hypermedia Project 2014/15, Technology Project.
+    </description>
+
+    <author href="http://zerbinatifrancesco.it." email="10365605@polimi.it">
+        Zerbinati Francesco
+    </author>
+
+    <gap:plugin name="com.phonegap.plugin.statusbar" version="1.0.1" />
+
+
+    <preference name="StatusBarOverlaysWebView" value="true" />
+
+</widget>
