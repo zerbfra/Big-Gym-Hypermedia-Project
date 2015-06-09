@@ -18,8 +18,13 @@
 
     <gap:plugin name="com.phonegap.plugin.statusbar" />
 
-<preference name="StatusBarOverlaysWebView" value="false" />
-<preference name="StatusBarBackgroundColor" value="#000000" />
-<preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+
+
+    <!-- iPhone 6 / 6+ icon -->
+    <icon src="images/icon.png" gap:platform="ios" width="180" height="180" />
+    <gap:splash src="images/splash.png" gap:platform="ios" width="320" height="480" />
 
 </widget>
