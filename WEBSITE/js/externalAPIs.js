@@ -47,22 +47,24 @@ function getTweets(){
 
 /* Facebook API */
 function facebookInit() {
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '489456924544138',
-            xfbml      : true,
-            version    : 'v2.3'
-        });
-    };
+    if (typeof FB == 'undefined') {
+        console.log('Loading Facebook API...');
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '489456924544138',
+                xfbml      : true,
+                version    : 'v2.3'
+            });
+        };
 
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    } else console.log('Facebook API already loaded');
 }
 
 function facebookPrepare() {
@@ -91,28 +93,28 @@ function facebookPrepare() {
 /* Send Mail */
 function sendMail() {
 
-        post_data = {
-            nome    : $('#nome').val(),
-            email  : $('#email').val(),
-            oggetto : $('#oggetto').val(),
-            testo   : $('#testo').val(),
-        };
+    post_data = {
+        nome    : $('#nome').val(),
+        email  : $('#email').val(),
+        oggetto : $('#oggetto').val(),
+        testo   : $('#testo').val(),
+    };
 
-        console.log(post_data);
-        $.ajax({
-            method: "POST",
-            crossDomain: true, //localhost purposes
-            url: "http://zerbinatifrancesco.it/hypermedia/php/sendMail.php",
-            data: post_data,
-            success: function(response) {
-                var message=JSON.parse(response);
-                alert(message.text);
-            },
-            error: function(request,error)
-            {
-                console.log("Error");
-            }
-        });
+    console.log(post_data);
+    $.ajax({
+        method: "POST",
+        crossDomain: true, //localhost purposes
+        url: "http://zerbinatifrancesco.it/hypermedia/php/sendMail.php",
+        data: post_data,
+        success: function(response) {
+            var message=JSON.parse(response);
+            alert(message.text);
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
 
 
 }

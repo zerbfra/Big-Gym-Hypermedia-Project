@@ -101,7 +101,7 @@ function manager(args) {
                     break;
                 case 'contact':
                     $.getScript("js/externalAPIs.js", function() {
-                       initializeMap();
+                        initializeMap();
                     });
                     getInfo('6');
                     break;
