@@ -33,6 +33,7 @@ _Optionals_
 
 * Google Maps API
 * Twitter API
+* Facebook API (to enable free trial in the pricing section)
 * Form (general info) + mail
 
 
