@@ -89,7 +89,9 @@ function manager(args) {
                     break;
                 case 'single_trainer':
                     getIstruttore(special,function () { clickPageLinks(); });
-                    getTweets();
+                    $.getScript("js/externalAPIs.js", function() {
+                        getTweets();
+                    });
                     break;
                 case 'pricing':
                     $.getScript("js/externalAPIs.js", function() {
@@ -101,8 +103,6 @@ function manager(args) {
                     $.getScript("js/externalAPIs.js", function() {
                        initializeMap();
                     });
-                    // prepare the button to send mail
-                    sendMailInit();
                     getInfo('6');
                     break;
                 default:

@@ -1,5 +1,4 @@
 /* Google Maps API */
-
 function initializeMap() {
     var myLatlng = new google.maps.LatLng(45.4773533,9.2343561);
     var mapOptions = {
@@ -17,8 +16,36 @@ function initializeMap() {
     });
 }
 
-/* Facebook API */
+/* Twitter API */
+function getTweets(){
 
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://zerbinatifrancesco.it/hypermedia/php/getTwitter.php", //Relative or absolute path to file.php file
+        success: function(response) {
+
+            var tweets=JSON.parse(response);
+            var el='<ul class="recent-list"><h4>Twitter</h4>';
+            for(var i=0;i<tweets.length;i++){
+
+                el+='<li>'+tweets[i]+'</li>';
+
+            }
+            el+='</ul>';
+            $("#twitter_feed").html(el);
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+
+}
+
+
+/* Facebook API */
 function facebookInit() {
     window.fbAsyncInit = function() {
         FB.init({
@@ -59,6 +86,33 @@ function facebookPrepare() {
             }
         );
     });
+}
+
+/* Send Mail */
+function sendMail() {
+
+        post_data = {
+            nome    : $('#nome').val(),
+            email  : $('#email').val(),
+            oggetto : $('#oggetto').val(),
+            testo   : $('#testo').val(),
+        };
+
+        console.log(post_data);
+        $.ajax({
+            method: "POST",
+            crossDomain: true, //localhost purposes
+            url: "http://zerbinatifrancesco.it/hypermedia/php/sendMail.php",
+            data: post_data,
+            success: function(response) {
+                var message=JSON.parse(response);
+                alert(message.text);
+            },
+            error: function(request,error)
+            {
+                console.log("Error");
+            }
+        });
 
 
 }
