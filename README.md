@@ -22,7 +22,8 @@ _Logic/MVC Pattern_
 * All the data are queried on a remote database via PHP scripts (contained in WEBSITE/php folder)
 * jQuery handles all the links and display in the main section the content based on the passed parameters, the link structure is /#page&param
 * The links are handled by pageManager.js 
-* All the external JSON calls are made via axajCalls.js
+* All the DB JSON calls are made via axajCalls.js
+* All the external APIs calls are made via externalAPIs.js
 * The menu behaviours are managed via nav.js
 
 _PhoneGap Build_
