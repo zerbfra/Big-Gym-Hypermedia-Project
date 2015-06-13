@@ -8,6 +8,7 @@ $('#menu_nav li:not(#submenu)').on('click', function(){
 // for all links in main pages
 function clickPageLinks() {
 
+    // this event is fired everytime you navigate via a link or when pressing back/forward browser buttons
     window.onpopstate = function() {
         var url = window.location.href;
 
@@ -37,7 +38,7 @@ function clickPageLinks() {
 
 }
 
-
+// it manages the loading of the main section
 function manager(args) {
 
     // get the actual page name
