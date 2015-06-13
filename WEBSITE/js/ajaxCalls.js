@@ -346,6 +346,7 @@ function getIstruttore(id,callback){
 
 }
 
+/** NOT RELATED TO DB FUNCTIONS **/
 
 function getTweets(){
 
@@ -374,6 +375,33 @@ function getTweets(){
 
 }
 
+function sendMailInit() {
+    $("#submit").click(function() {
+        post_data = {
+            nome    : $('#nome').val(),
+            email  : $('#email').val(),
+            oggetto : $('#oggetto').val(),
+            testo   : $('#testo').val(),
+        };
+
+        console.log(post_data);
+        $.ajax({
+            method: "POST",
+            crossDomain: true, //localhost purposes
+            url: "http://zerbinatifrancesco.it/hypermedia/php/sendMail.php",
+            data: post_data,
+            success: function(response) {
+                var message=JSON.parse(response);
+                alert(message.text);
+            },
+            error: function(request,error)
+            {
+                console.log("Error");
+            }
+        });
+
+    });
+}
 
 /***** DRAWING FUNCTIONS *******/
 
