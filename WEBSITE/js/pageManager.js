@@ -15,7 +15,7 @@ $('#menu_nav li:not(#submenu)').on('click', function(){
 // manages click in pages + menu highlighting management
 function clickPageLinks() {
 
-    // this event is fired everytime you navigate via a link or when pressing back/forward browser buttons
+    // this event is fired everytime you click a link or when pressing back/forward browser buttons
     window.onpopstate = function() {
         var url = window.location.href;
 

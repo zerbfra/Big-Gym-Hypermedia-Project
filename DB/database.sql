@@ -1,8 +1,6 @@
--- phpMyAdmin SQL Dump
+-- Big Gym SQL Dump
+-- Zerbinati Francesco
 -- version 4.0.10.7
--- http://www.phpmyadmin.net
---
--- Host: localhost
 -- Generato il: Mag 26, 2015 alle 19:25
 -- Versione del server: 5.6.23-log
 -- Versione PHP: 5.4.23
