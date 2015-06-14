@@ -22,7 +22,7 @@ $access_token_secret = 'YsgGJzft885ZjYD4TuVzUBzd5B1sSjUDpleo236NdZVXE';
 # Create the connection
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token, $access_token_secret);
 
-$twitter_feed = $connection->get("statuses/user_timeline", array("screen_name" => "zerbfra" ,"count" => 3, "exclude_replies" => true));
+$twitter_feed = $connection->get("statuses/user_timeline", array("screen_name" => "zerbfra" ,"count" => 2, "exclude_replies" => true));
 
 
 # Example output
