@@ -1,3 +1,10 @@
+/*
+ * Big Gym: HYP Project 2014-15
+ * statiCalls.js
+ * Set of functions to retrieve data from database fetched via php (static data)
+ * Author: Zerbinati Francesco
+ */
+
 function getInfo(info) {
 
         $.ajax({

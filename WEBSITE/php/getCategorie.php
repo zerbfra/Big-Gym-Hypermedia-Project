@@ -1,4 +1,10 @@
 <?php
+/*
+ * Big Gym: HYP Project 2014-15
+ * getCategorie.php
+ * Retrieve all categories
+ * Author: Zerbinati Francesco
+ */
 
 header('Access-Control-Allow-Origin: *');
 

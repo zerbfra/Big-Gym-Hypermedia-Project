@@ -1,4 +1,10 @@
 <?php
+/*
+ * Big Gym: HYP Project 2014-15
+ * sendMail.php
+ * Send mail to a specific address + return error code or success message
+ * Author: Zerbinati Francesco
+ */
 
 header('Access-Control-Allow-Origin: *');
 

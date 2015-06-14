@@ -1,4 +1,10 @@
 <?php
+/*
+ * Big Gym: HYP Project 2014-15
+ * getIstruttori.php
+ * Retrieve all trainers
+ * Author: Zerbinati Francesco
+ */
 
 header('Access-Control-Allow-Origin: *');
 

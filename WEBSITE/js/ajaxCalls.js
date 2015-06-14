@@ -1,10 +1,17 @@
+/*
+ * Big Gym: HYP Project 2014-15
+ * ajaxCalls.js
+ * Set of functions to retrieve data from database fetched via php
+ * Author: Zerbinati Francesco
+ */
+
+// retrieve list of categories from the db
 function getCategorie(callback){
     console.log("I'm ready!");
     var id=1;
 
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://zerbinatifrancesco.it/hypermedia/php/getCategorie.php", //Relative or absolute path to file.php file
         data: {course:id},
@@ -42,13 +49,13 @@ function getCategorie(callback){
 
 }
 
+// retrieve courses given a category (category param)
 function getCorsiCat(category,callback) {
 
     console.log("I'm ready!");
 
     $.ajax({
         method: "POST",
-        //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://zerbinatifrancesco.it/hypermedia/php/getCorsi.php", //Relative or absolute path to file.php file
         data: {cat:category},
@@ -81,6 +88,7 @@ function getCorsiCat(category,callback) {
 
 }
 
+// get all the courses
 function getCorsi(callback){
     console.log("I'm ready!");
 
@@ -119,7 +127,7 @@ function getCorsi(callback){
 
 }
 
-
+// get courses organized by levels (param "lvl" set to 1)
 function getCorsiPerLivello(callback){
     console.log("I'm ready!");
 
@@ -185,6 +193,7 @@ function getCorsiPerLivello(callback){
 
 }
 
+// get a specific course based on the id
 function getCorso(id,callback){
     console.log("I'm ready!");
 
@@ -243,7 +252,7 @@ function getCorso(id,callback){
 
 }
 
-
+// get all the trainers
 function getIstruttori(callback){
     console.log("I'm ready!");
 
@@ -278,7 +287,7 @@ function getIstruttori(callback){
 
 }
 
-
+// get one specific trainer by id
 function getIstruttore(id,callback){
     console.log("I'm ready!");
 
@@ -349,7 +358,7 @@ function getIstruttore(id,callback){
 
 /***** DRAWING FUNCTIONS *******/
 
-// Funzione per disegnare una entry di un corso
+// draw the entry for one course, if last it has a different design
 function drawEntryCorso(last,object) {
     var el ='';
 

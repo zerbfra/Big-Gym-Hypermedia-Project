@@ -1,4 +1,10 @@
 <?php
+/*
+ * Big Gym: HYP Project 2014-15
+ * getInfo.php
+ * Based on the id parameter, retrieve different "static" infos from the db
+ * Author: Zerbinati Francesco
+ */
 
 header('Access-Control-Allow-Origin: *');
 

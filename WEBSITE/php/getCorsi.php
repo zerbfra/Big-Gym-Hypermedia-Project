@@ -1,4 +1,10 @@
 <?php
+/*
+ * Big Gym: HYP Project 2014-15
+ * getCorsi.php
+ * Retrieve courses by level, category or no parameter
+ * Author: Zerbinati Francesco
+ */
 
 header('Access-Control-Allow-Origin: *');
 

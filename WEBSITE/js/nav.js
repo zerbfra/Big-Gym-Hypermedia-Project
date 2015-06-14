@@ -1,14 +1,22 @@
+/*
+ * Big Gym: HYP Project 2014-15
+ * nav.js
+ * Manager for the responsive menu
+ * Author: Zerbinati Francesco
+ */
 
 var ww = document.body.clientWidth;
 
 $(".nav").css("display", "none");
 
+// add classes for dropdown menu
 $(".nav li a").each(function() {
     if ($(this).next().length > 0) {
         $(this).addClass("parent");
     };
 })
 
+// manage click on the "Menu" button in the mobile view
 $(".toggleMenu").click(function(e) {
     e.preventDefault();
     $(this).toggleClass("active");
@@ -17,12 +25,14 @@ $(".toggleMenu").click(function(e) {
 
 responsiveMenu();
 
+// hide/show menu
 function slideMenu() {
     if (ww < 768) {
         $(".nav").slideToggle();
     }
 }
 
+// manage the responsive menu
 function responsiveMenu () {
 	if (ww < 768) {
 		$(".toggleMenu").css("display", "inline-block");

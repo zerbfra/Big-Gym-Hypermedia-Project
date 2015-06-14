@@ -1,4 +1,10 @@
 <?php
+/*
+ * Big Gym: HYP Project 2014-15
+ * getCorso.php
+ * Retrieve one course by id, with all the associated informations
+ * Author: Zerbinati Francesco
+ */
 
 header('Access-Control-Allow-Origin: *');
 
@@ -77,6 +83,7 @@ else {
 
     }
 
+    // encapsulate info, times, specials and trainer
     echo json_encode(array('info'=>$info, 'times'=>$times, 'specials'=>$specials,'trainer'=>$trainer));
 
     //free result

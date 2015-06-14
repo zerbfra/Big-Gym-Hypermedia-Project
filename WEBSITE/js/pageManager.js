@@ -1,3 +1,10 @@
+/*
+ * Big Gym: HYP Project 2014-15
+ * pageManager.js
+ * Main manager for pages
+ * Author: Zerbinati Francesco
+ */
+
 // for all <li> elements in menu expect for submenus
 $('#menu_nav li:not(#submenu)').on('click', function(){
     // collapse the menu
@@ -5,7 +12,7 @@ $('#menu_nav li:not(#submenu)').on('click', function(){
 });
 
 
-// for all links in main pages
+// manages click in pages + menu highlighting management
 function clickPageLinks() {
 
     // this event is fired everytime you navigate via a link or when pressing back/forward browser buttons
@@ -38,7 +45,7 @@ function clickPageLinks() {
 
 }
 
-// it manages the loading of the main section
+// it manages the content of the main section
 function manager(args) {
 
     // get the actual page name

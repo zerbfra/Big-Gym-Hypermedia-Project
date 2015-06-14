@@ -1,4 +1,10 @@
 <?php
+/*
+ * Big Gym: HYP Project 2014-15
+ * getTwitter.php
+ * Retrieve last 3 tweets from Twitter account, using TwitterOAuth
+ * Author: Zerbinati Francesco
+ */
 
 header('Access-Control-Allow-Origin: *');
 
@@ -15,9 +21,6 @@ $access_token_secret = 'YsgGJzft885ZjYD4TuVzUBzd5B1sSjUDpleo236NdZVXE';
 
 # Create the connection
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token, $access_token_secret);
-//$content = $connection->get("account/verify_credentials");
-
-//$tweets = $connection->get('statuses/user_timeline', array('screen_name' => 'zerbfra', 'exclude_replies' => 'true', 'include_rts' => 'false', 'count' => 10));
 
 $twitter_feed = $connection->get("statuses/user_timeline", array("screen_name" => "zerbfra" ,"count" => 3, "exclude_replies" => true));
 
@@ -27,10 +30,9 @@ if(!empty($twitter_feed)) {
 
     $tweets = array();
     foreach($twitter_feed as $item)
-        {
-            //echo $item->text;
-            array_push($tweets,$item->text);
-        }
+    {
+        array_push($tweets,$item->text);
+    }
 
     echo(json_encode($tweets));
 

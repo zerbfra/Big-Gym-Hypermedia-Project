@@ -1,3 +1,10 @@
+/*
+ * Big Gym: HYP Project 2014-15
+ * externalAPIs.js
+ * Set of functions to fetch data from external services (Google, Twitter, Facebook)
+ * Author: Zerbinati Francesco
+ */
+
 /* Google Maps API */
 function initializeMap() {
     var myLatlng = new google.maps.LatLng(45.4773533,9.2343561);
