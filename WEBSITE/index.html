@@ -32,10 +32,8 @@
         <script>
             $(function(){
 
-                // load the header manager after loading the header
-                $(".header").load( "header.html", function() {
-                    //$.getScript('js/headerManager.js');
-                });
+                // load the header
+                $(".header").load( "header.html");
 
                 // default behaviour: load homepage
                 $(".main").load( "home.html", function() {
