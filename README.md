@@ -28,7 +28,7 @@ _Logic/MVC Pattern_
 
 _PhoneGap Build_
 
-The PhoneGap Build is available [here](https://build.phonegap.com/apps/1475653/share) 
+The PhoneGap Build was fully working and was demoed during the exam
 
 _Optionals_
 
